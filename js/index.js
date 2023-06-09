@@ -51,7 +51,7 @@ function findIndex() {
 	let curTime = doms.audio.currentTime
 	for (let index = 0; index < lrcData.length; index++) {
 		const element = lrcData[index]
-		if (element.time > curTime) {
+		if (element.time > curTime+0.2) {
 			return index - 1
 		}
 	}

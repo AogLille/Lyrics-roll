@@ -51,7 +51,7 @@ function findIndex() {
 	let curTime = doms.audio.currentTime
 	for (let index = 0; index < lrcData.length; index++) {
 		const element = lrcData[index]
-		if (element.time > curTime+0.2) {
+		if (element.time > curTime + 0.2) {	//0.2就是同步的误差时间
 			return index - 1
 		}
 	}
@@ -94,4 +94,4 @@ function setOffset() {
 	}
 }
 
-doms.audio.addEventListener('timeupdate',setOffset)
+doms.audio.addEventListener('timeupdate', setOffset)
